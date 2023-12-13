@@ -1,0 +1,4 @@
+proton: EnvironmentSpec
+spec:
+  name_bucket_1: toanla123-env1
+  name_bucket_2: toanla123-env2

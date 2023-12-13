@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Environment Template Stack
+
+Parameters:
+  BucketName1:
+    Type: String
+    Description: Name of Bucket
+    Default: '${{ environment.inputs.name_bucket_1 }}'
+  BucketName2:
+    Type: String
+    Description: Name of Bucket
+    Default: '${{ environment.inputs.name_bucket_2 }}'
+
+Resources:
+  BucketName1:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: s3/s3.yaml
+      Parameters:
+        BucketName: !Ref 'BucketName1'
+  
+  BucketName2:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: s3/s3.yaml
+      Parameters:
+        BucketName: !Ref 'BucketName2'
