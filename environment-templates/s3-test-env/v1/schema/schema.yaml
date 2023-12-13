@@ -8,11 +8,10 @@ schema:
       description: "Input properties for my environment"
       properties:
         name_bucket_1:
-          type: String
-          description: "Input Name of S3 Environment"
+          type: string
+          description: "Name of S3 Bucket"
           default: toanla123-env1
         name_bucket_2:
-          type: String
-          description: "Input Name of S3 Environment"
+          type: string
+          description: "Name of S3 Bucket"
           default: toanla123-env2
-          
